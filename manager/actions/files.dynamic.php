@@ -384,7 +384,7 @@ echo $_lang['files_dirwritable'],' <b>',is_writable($startpath)==1 ? $_lang['yes
 if (((@ini_get("file_uploads") == true) || get_cfg_var("file_uploads") == 1) && is_writable($startpath)) {
 	@ini_set("upload_max_filesize", $upload_maxsize); // modified by raymond
 ?>
-<hr><h3>Uploadify</h3>
+<hr>
 <link href="<?php echo $modx->config['base_url']?>assets/modules/uploadify/jquery.uploadify-v2.1.0/uploadify.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?php echo $modx->config['base_url']?>assets/modules/uploadify/jquery.uploadify-v2.1.0/swfobject.js"></script>
 <script type="text/javascript" src="<?php echo $modx->config['base_url']?>assets/js/jquery.min.js"></script>
@@ -434,6 +434,7 @@ $(document).ready(function() {
 
 </form>
 
+<?php /* Uncomment this section if you want to use old form
 <hr>
 <h3>Old Upload Form</h3>
 <form name="upload" enctype="multipart/form-data" action="index.php" method="post">
@@ -449,6 +450,7 @@ $(document).ready(function() {
 <input type="submit" value="<?php echo $_lang['files_uploadfile']?>" style="display:none;">
 </div>
 </form>
+*/ ?>
 
 <?php
 } else {
